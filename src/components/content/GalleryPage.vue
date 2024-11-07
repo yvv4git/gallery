@@ -10,7 +10,7 @@
 import ImageGrid from "./ImageGrid.vue";
 
 export default {
-  name: "MainContent",
+  name: "GalleryPage",
   components: {
     ImageGrid,
   },
