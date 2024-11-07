@@ -12,7 +12,7 @@ const routes = [
         path: '/cart',
         name: 'Cart',
         component: CartPage
-    }
+    },
 ];
 
 const router = createRouter({

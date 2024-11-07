@@ -1,6 +1,7 @@
 <template>
   <header>
     <h1>Header</h1>
+    <router-link to="/" class="gallery-button">Gallery</router-link>
     <router-link to="/cart" class="cart-button">Cart</router-link>
   </header>
 </template>
@@ -22,9 +23,11 @@ header {
   align-items: center;
 }
 
+.gallery-button,
 .cart-button {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
+  margin-left: 1rem;
 }
 </style>
