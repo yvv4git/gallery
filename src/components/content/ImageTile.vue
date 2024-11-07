@@ -5,7 +5,9 @@
       <img :src="imageSrc" alt="Fullscreen Image" />
     </div>
     <div class="price">Price: ${{ price }}</div>
-    <button @click.stop="addToCart" class="add-to-cart-button">Добавить в корзину</button>
+    <button @click.stop="addToCart" class="add-to-cart-button" :disabled="isInCart">
+      {{ isInCart ? "В корзине" : "Добавить в корзину" }}
+    </button>
   </div>
 </template>
 
@@ -23,6 +25,10 @@ export default {
     },
     price: {
       type: Number,
+      required: true,
+    },
+    isInCart: {
+      type: Boolean,
       required: true,
     },
   },
@@ -46,7 +52,9 @@ export default {
       }
     },
     addToCart() {
-      this.$emit("add-to-cart", this.imageId);
+      if (!this.isInCart) {
+        this.$emit("add-to-cart", this.imageId);
+      }
     },
   },
 };
@@ -99,5 +107,10 @@ export default {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+.add-to-cart-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 </style>

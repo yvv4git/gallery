@@ -2,7 +2,12 @@
   <main class="main-content">
     <h2>Main Content</h2>
     <p>This is the main content of the page.</p>
-    <ImageGrid :images="images" :columns="3" @add-to-cart="addToCart" />
+    <ImageGrid
+      :images="images"
+      :columns="3"
+      :cartItems="cartItems"
+      @add-to-cart="addToCart"
+    />
   </main>
 </template>
 
@@ -30,10 +35,13 @@ export default {
   methods: {
     addToCart(imageId) {
       const image = this.images.find((img) => img.id === imageId);
-      if (image) {
+      if (image && !this.isInCart(imageId)) {
         this.cartItems.push(image);
         this.$emit("update-cart", this.cartItems);
       }
+    },
+    isInCart(imageId) {
+      return this.cartItems.some((item) => item.id === imageId);
     },
   },
 };
