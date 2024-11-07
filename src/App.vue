@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     updateCart(cartItems) {
-      this.cartItems = cartItems;
+      this.cartItems = [...this.cartItems, ...cartItems];
     },
   },
 };
