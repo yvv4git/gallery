@@ -1,6 +1,6 @@
 <template>
   <div class="image-grid" :style="{ gridTemplateColumns: `repeat(${columns}, 1fr)` }">
-    <ImageTile v-for="(image, index) in images" :key="index" :imageSrc="image" />
+    <ImageTile v-for="image in images" :key="image.id" :imageSrc="image.src" />
   </div>
 </template>
 

@@ -17,12 +17,12 @@ export default {
   data() {
     return {
       images: [
-        require("@/assets/images/image1.jpg"),
-        require("@/assets/images/image1.jpg"),
-        require("@/assets/images/image1.jpg"),
-        require("@/assets/images/image1.jpg"),
-        require("@/assets/images/image1.jpg"),
-        require("@/assets/images/image1.jpg"),
+        { id: 1, src: require("@/assets/images/image1.jpg") },
+        { id: 2, src: require("@/assets/images/image1.jpg") },
+        { id: 3, src: require("@/assets/images/image1.jpg") },
+        { id: 4, src: require("@/assets/images/image1.jpg") },
+        { id: 5, src: require("@/assets/images/image1.jpg") },
+        { id: 6, src: require("@/assets/images/image1.jpg") },
       ],
     };
   },
