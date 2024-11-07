@@ -5,6 +5,8 @@
       :key="image.id"
       :imageSrc="image.src"
       :imageId="image.id"
+      :price="image.price"
+      :isInCart="isInCart(image.id)"
       @add-to-cart="handleAddToCart"
     />
   </div>
@@ -27,10 +29,17 @@ export default {
       type: Number,
       default: 3,
     },
+    cartItems: {
+      type: Array,
+      required: true,
+    },
   },
   methods: {
     handleAddToCart(imageId) {
       this.$emit("add-to-cart", imageId);
+    },
+    isInCart(imageId) {
+      return this.cartItems.some((item) => item.id === imageId);
     },
   },
 };
