@@ -5,7 +5,8 @@
     <ul>
       <li v-for="item in cartItems" :key="item.id">
         <img :src="item.src" alt="Cart Image" class="cart-image" />
-        <span>{{ item.id }}</span>
+        <span>{{ item.id }} </span>
+        <span>Price: ${{ item.price }}</span>
       </li>
     </ul>
   </div>

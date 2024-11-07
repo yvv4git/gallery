@@ -4,6 +4,7 @@
     <div v-if="isFullscreen" class="fullscreen-overlay" @click="toggleFullscreen">
       <img :src="imageSrc" alt="Fullscreen Image" />
     </div>
+    <div class="price">Price: ${{ price }}</div>
     <button @click.stop="addToCart" class="add-to-cart-button">Добавить в корзину</button>
   </div>
 </template>
@@ -17,6 +18,10 @@ export default {
       required: true,
     },
     imageId: {
+      type: Number,
+      required: true,
+    },
+    price: {
       type: Number,
       required: true,
     },
@@ -77,9 +82,16 @@ export default {
   max-height: 90%;
 }
 
+.price {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
 .add-to-cart-button {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #42b983;

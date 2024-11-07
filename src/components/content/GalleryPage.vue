@@ -17,12 +17,12 @@ export default {
   data() {
     return {
       images: [
-        { id: 1, src: require("@/assets/images/image1.jpg") },
-        { id: 2, src: require("@/assets/images/image1.jpg") },
-        { id: 3, src: require("@/assets/images/image1.jpg") },
-        { id: 4, src: require("@/assets/images/image1.jpg") },
-        { id: 5, src: require("@/assets/images/image1.jpg") },
-        { id: 6, src: require("@/assets/images/image1.jpg") },
+        { id: 1, src: require("@/assets/images/image1.jpg"), price: 10.99 },
+        { id: 2, src: require("@/assets/images/image1.jpg"), price: 15.99 },
+        { id: 3, src: require("@/assets/images/image1.jpg"), price: 12.99 },
+        { id: 4, src: require("@/assets/images/image1.jpg"), price: 9.99 },
+        { id: 5, src: require("@/assets/images/image1.jpg"), price: 14.99 },
+        { id: 6, src: require("@/assets/images/image1.jpg"), price: 11.99 },
       ],
       cartItems: [],
     };

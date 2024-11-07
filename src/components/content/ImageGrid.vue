@@ -5,6 +5,7 @@
       :key="image.id"
       :imageSrc="image.src"
       :imageId="image.id"
+      :price="image.price"
       @add-to-cart="handleAddToCart"
     />
   </div>
