@@ -1,7 +1,8 @@
 <template>
   <header>
     <h1>Header</h1>
-    <router-link to="/" class="gallery-button">Gallery</router-link>
+    <router-link to="/" class="main-button">Main</router-link>
+    <router-link to="/gallery" class="gallery-button">Gallery</router-link>
     <router-link to="/cart" class="cart-button">Cart</router-link>
   </header>
 </template>
@@ -23,6 +24,7 @@ header {
   align-items: center;
 }
 
+.main-button,
 .gallery-button,
 .cart-button {
   color: white;
