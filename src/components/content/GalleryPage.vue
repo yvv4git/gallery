@@ -2,12 +2,7 @@
   <main class="main-content">
     <h2>Main Content</h2>
     <p>This is the main content of the page.</p>
-    <ImageGrid
-      :images="images"
-      :columns="3"
-      :cartItems="cartItems"
-      @add-to-cart="addToCart"
-    />
+    <ImageGrid :images="images" :columns="3" :cartItems="cartItems" @add-to-cart="addToCart" />
   </main>
 </template>
 
@@ -43,6 +38,15 @@ export default {
     isInCart(imageId) {
       return this.cartItems.some((item) => item.id === imageId);
     },
+    loadCartItems() {
+      const cartItems = localStorage.getItem("cartItems");
+      if (cartItems) {
+        this.cartItems = JSON.parse(cartItems);
+      }
+    },
+  },
+  created() {
+    this.loadCartItems();
   },
 };
 </script>
