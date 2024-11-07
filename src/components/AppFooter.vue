@@ -1,19 +1,19 @@
 <template>
-  <header>
-    <h1>Header</h1>
-  </header>
+  <footer>
+    <p>Footer</p>
+  </footer>
 </template>
 
 <script>
 /* eslint-disable vue/multi-word-component-names */
 export default {
-  name: "Header",
+  name: "AppFooter",
 };
 </script>
 
 <style scoped>
-header {
-  background-color: #42b983;
+footer {
+  background-color: #35495e;
   color: white;
   padding: 1rem;
   text-align: center;
