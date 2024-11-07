@@ -4,6 +4,7 @@
     <div v-if="isFullscreen" class="fullscreen-overlay" @click="toggleFullscreen">
       <img :src="imageSrc" alt="Fullscreen Image" />
     </div>
+    <button @click.stop="addToCart" class="add-to-cart-button">Добавить в корзину</button>
   </div>
 </template>
 
@@ -13,6 +14,10 @@ export default {
   props: {
     imageSrc: {
       type: String,
+      required: true,
+    },
+    imageId: {
+      type: Number,
       required: true,
     },
   },
@@ -35,6 +40,9 @@ export default {
         this.toggleFullscreen();
       }
     },
+    addToCart() {
+      this.$emit("add-to-cart", this.imageId);
+    },
   },
 };
 </script>
@@ -42,6 +50,7 @@ export default {
 <style scoped>
 .image-tile {
   cursor: pointer;
+  position: relative;
 }
 
 .image-tile img {
@@ -66,5 +75,17 @@ export default {
 .fullscreen-overlay img {
   max-width: 90%;
   max-height: 90%;
+}
+
+.add-to-cart-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #42b983;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 </style>

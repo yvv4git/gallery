@@ -1,6 +1,12 @@
 <template>
   <div class="image-grid" :style="{ gridTemplateColumns: `repeat(${columns}, 1fr)` }">
-    <ImageTile v-for="image in images" :key="image.id" :imageSrc="image.src" />
+    <ImageTile
+      v-for="image in images"
+      :key="image.id"
+      :imageSrc="image.src"
+      :imageId="image.id"
+      @add-to-cart="handleAddToCart"
+    />
   </div>
 </template>
 
@@ -20,6 +26,11 @@ export default {
     columns: {
       type: Number,
       default: 3,
+    },
+  },
+  methods: {
+    handleAddToCart(imageId) {
+      this.$emit("add-to-cart", imageId);
     },
   },
 };

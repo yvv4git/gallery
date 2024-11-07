@@ -1,20 +1,30 @@
 <template>
   <div id="app">
-    <Header />
-    <router-view />
+    <AppHeader />
+    <router-view :cartItems="cartItems" @update-cart="updateCart" />
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from "./components/AppHeader.vue";
+import AppHeader from "./components/AppHeader.vue";
 import Footer from "./components/AppFooter.vue";
 
 export default {
   name: "App",
   components: {
-    Header,
+    AppHeader,
     Footer,
+  },
+  data() {
+    return {
+      cartItems: [],
+    };
+  },
+  methods: {
+    updateCart(cartItems) {
+      this.cartItems = cartItems;
+    },
   },
 };
 </script>
