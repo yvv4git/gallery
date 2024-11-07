@@ -23,8 +23,18 @@ export default {
   },
   methods: {
     updateCart(cartItems) {
-      this.cartItems = [...this.cartItems, ...cartItems];
+      this.cartItems = cartItems;
+      localStorage.setItem("cartItems", JSON.stringify(this.cartItems));
     },
+    loadCartItems() {
+      const cartItems = localStorage.getItem("cartItems");
+      if (cartItems) {
+        this.cartItems = JSON.parse(cartItems);
+      }
+    },
+  },
+  created() {
+    this.loadCartItems();
   },
 };
 </script>
