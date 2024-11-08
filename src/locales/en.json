@@ -6,7 +6,8 @@
     },
     "footer": {
         "support": "Support the Author",
-        "developer": "Developed by {name} in {year}"
+        "developer": "Developed by {name} in {year}",
+        "developerName": "Eliseev V.V."
     },
     "cartPage": {
         "title": "Cart Page",

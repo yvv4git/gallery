@@ -6,12 +6,18 @@
       $t("header.gallery")
     }}</router-link>
     <router-link to="/cart" class="cart-button">{{ $t("header.cart") }}</router-link>
+    <LanguageSwitcher />
   </header>
 </template>
 
 <script>
+import LanguageSwitcher from "./LanguageSwitcher.vue";
+
 export default {
   name: "AppHeader",
+  components: {
+    LanguageSwitcher,
+  },
 };
 </script>
 

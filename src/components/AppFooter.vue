@@ -6,7 +6,7 @@
       }}</router-link>
     </div>
     <div class="developer-info">
-      {{ $t("footer.developer", { name: "Имя Разработчика", year: 2023 }) }}
+      {{ $t("footer.developer", { name: $t("footer.developerName"), year: 2024 }) }}
     </div>
   </footer>
 </template>

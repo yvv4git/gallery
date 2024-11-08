@@ -6,7 +6,8 @@
     },
     "footer": {
         "support": "Поддержать автора",
-        "developer": "Разработано {name} в {year}"
+        "developer": "Разработано {name} в {year}",
+        "developerName": "Елисеев В.В."
     },
     "cartPage": {
         "title": "Страница корзины",
