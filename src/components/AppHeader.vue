@@ -1,9 +1,11 @@
 <template>
   <header>
-    <h1>Header</h1>
-    <router-link to="/" class="main-button">Main</router-link>
-    <router-link to="/gallery" class="gallery-button">Gallery</router-link>
-    <router-link to="/cart" class="cart-button">Cart</router-link>
+    <h1>{{ $t("header.main") }}</h1>
+    <router-link to="/" class="main-button">{{ $t("header.main") }}</router-link>
+    <router-link to="/gallery" class="gallery-button">{{
+      $t("header.gallery")
+    }}</router-link>
+    <router-link to="/cart" class="cart-button">{{ $t("header.cart") }}</router-link>
   </header>
 </template>
 

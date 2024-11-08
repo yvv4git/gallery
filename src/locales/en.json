@@ -1,0 +1,34 @@
+{
+    "header": {
+        "gallery": "Gallery",
+        "cart": "Cart",
+        "main": "Main"
+    },
+    "footer": {
+        "support": "Support the Author",
+        "developer": "Developed by {name} in {year}"
+    },
+    "cartPage": {
+        "title": "Cart Page",
+        "totalPrice": "Total: ${totalPrice}",
+        "checkout": "Checkout"
+    },
+    "checkoutPage": {
+        "title": "Checkout"
+    },
+    "donatePage": {
+        "title": "Support the Author"
+    },
+    "mainPage": {
+        "title": "Main Page"
+    },
+    "galleryPage": {
+        "title": "Gallery Page",
+        "description": "This is the main content of the page."
+    },
+    "imageTile": {
+        "price": "Price: ${price}",
+        "inCart": "In Cart",
+        "addToCart": "Add to Cart"
+    }
+}

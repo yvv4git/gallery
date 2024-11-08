@@ -1,0 +1,34 @@
+{
+    "header": {
+        "gallery": "Галерея",
+        "cart": "Корзина",
+        "main": "Главная"
+    },
+    "footer": {
+        "support": "Поддержать автора",
+        "developer": "Разработано {name} в {year}"
+    },
+    "cartPage": {
+        "title": "Страница корзины",
+        "totalPrice": "Общая сумма: ${totalPrice}",
+        "checkout": "Оформить заказ"
+    },
+    "checkoutPage": {
+        "title": "Оформление заказа"
+    },
+    "donatePage": {
+        "title": "Поддержать автора"
+    },
+    "mainPage": {
+        "title": "Главная страница"
+    },
+    "galleryPage": {
+        "title": "Страница галереи",
+        "description": "Это основное содержимое страницы."
+    },
+    "imageTile": {
+        "price": "Цена: ${price}",
+        "inCart": "В корзине",
+        "addToCart": "Добавить в корзину"
+    }
+}

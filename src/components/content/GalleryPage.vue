@@ -1,8 +1,13 @@
 <template>
   <main class="main-content">
-    <h2>Main Content</h2>
-    <p>This is the main content of the page.</p>
-    <ImageGrid :images="images" :columns="3" :cartItems="cartItems" @add-to-cart="addToCart" />
+    <h2>{{ $t("galleryPage.title") }}</h2>
+    <p>{{ $t("galleryPage.description") }}</p>
+    <ImageGrid
+      :images="images"
+      :columns="3"
+      :cartItems="cartItems"
+      @add-to-cart="addToCart"
+    />
   </main>
 </template>
 
