@@ -1,11 +1,7 @@
 <template>
   <div id="app">
     <AppHeader />
-    <router-view
-      :cartItems="cartItems"
-      @update-cart="updateCart"
-      @remove-from-cart="removeFromCart"
-    />
+    <router-view :cartItems="cartItems" @update-cart="updateCart" @remove-from-cart="removeFromCart" />
     <Footer />
   </div>
 </template>

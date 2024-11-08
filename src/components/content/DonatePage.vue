@@ -1,5 +1,5 @@
 <template>
-  <div class="donate-page">
+  <div class="donate-page main-content">
     <h2>Поддержать автора</h2>
     <p>Здесь можно добавить форму или информацию для оплаты.</p>
   </div>
