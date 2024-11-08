@@ -10,6 +10,7 @@
         <button @click="removeFromCart(item.id)" class="remove-button">Удалить</button>
       </li>
     </ul>
+    <div class="total-price">Общая сумма: ${{ totalPrice }}</div>
   </div>
 </template>
 
@@ -20,6 +21,11 @@ export default {
     cartItems: {
       type: Array,
       required: true,
+    },
+  },
+  computed: {
+    totalPrice() {
+      return this.cartItems.reduce((total, item) => total + item.price, 0);
     },
   },
   methods: {
@@ -37,7 +43,7 @@ export default {
 }
 
 .cart-image {
-  width: 100px;
+  width: 200px;
   height: auto;
   margin-right: 10px;
 }
@@ -60,5 +66,11 @@ li {
   padding: 5px 10px;
   cursor: pointer;
   margin-left: 10px;
+}
+
+.total-price {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 </style>
