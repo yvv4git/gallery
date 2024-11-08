@@ -11,6 +11,7 @@
       </li>
     </ul>
     <div class="total-price">Общая сумма: ${{ totalPrice }}</div>
+    <router-link to="/checkout" class="checkout-button">Оформить заказ</router-link>
   </div>
 </template>
 
@@ -72,5 +73,20 @@ li {
   margin-top: 20px;
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+.checkout-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #42b983;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+  background-color: #35495e;
 }
 </style>
