@@ -4,9 +4,9 @@
     <div v-if="isFullscreen" class="fullscreen-overlay" @click="toggleFullscreen">
       <img :src="imageSrc" alt="Fullscreen Image" />
     </div>
-    <div class="price">Price: ${{ price }}</div>
+    <div class="price">{{ $t("imageTile.price", { price: price }) }}</div>
     <button @click.stop="addToCart" class="add-to-cart-button" :disabled="isInCart">
-      {{ isInCart ? "В корзине" : "Добавить в корзину" }}
+      {{ isInCart ? $t("imageTile.inCart") : $t("imageTile.addToCart") }}
     </button>
   </div>
 </template>

@@ -1,17 +1,22 @@
 <template>
   <div class="cart-page main-content">
-    <h2>Cart Page</h2>
-    <p>This is the cart page.</p>
+    <h2>{{ $t("cartPage.title") }}</h2>
     <ul>
       <li v-for="item in cartItems" :key="item.id">
         <img :src="item.src" alt="Cart Image" class="cart-image" />
         <span>{{ item.id }}</span>
-        <span> Price: ${{ item.price }}</span>
-        <button @click="removeFromCart(item.id)" class="remove-button">Удалить</button>
+        <span> {{ $t("cartPage.totalPrice") }}: ${{ item.price }}</span>
+        <button @click="removeFromCart(item.id)" class="remove-button">
+          {{ $t("cartPage.remove") }}
+        </button>
       </li>
     </ul>
-    <div class="total-price">Общая сумма: ${{ totalPrice }}</div>
-    <router-link to="/checkout" class="checkout-button">Оформить заказ</router-link>
+    <div class="total-price">
+      {{ $t("cartPage.totalPrice", { totalPrice: totalPrice }) }}
+    </div>
+    <router-link to="/checkout" class="checkout-button">{{
+      $t("cartPage.checkout")
+    }}</router-link>
   </div>
 </template>
 

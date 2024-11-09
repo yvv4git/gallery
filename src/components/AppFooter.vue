@@ -1,11 +1,12 @@
 <template>
   <footer class="footer">
     <div class="support-button">
-      <router-link to="/donate" class="support-link">Поддержать автора</router-link>
+      <router-link to="/donate" class="support-link">{{
+        $t("footer.support")
+      }}</router-link>
     </div>
     <div class="developer-info">
-      by <a href="https://example.com" target="_blank">Eliseev V.V.</a> ©
-      2024
+      {{ $t("footer.developer", { name: $t("footer.developerName"), year: 2024 }) }}
     </div>
   </footer>
 </template>
