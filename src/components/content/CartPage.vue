@@ -5,7 +5,7 @@
       <li v-for="item in cartItems" :key="item.id">
         <img :src="item.src" alt="Cart Image" class="cart-image" />
         <span>{{ item.id }}</span>
-        <span> {{ $t("cartPage.price") }}: ${{ item.price }}</span>
+        <span> {{ $t("cartPage.totalPrice") }}: ${{ item.price }}</span>
         <button @click="removeFromCart(item.id)" class="remove-button">
           {{ $t("cartPage.remove") }}
         </button>
