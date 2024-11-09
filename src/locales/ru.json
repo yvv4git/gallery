@@ -12,7 +12,8 @@
     "cartPage": {
         "title": "Страница корзины",
         "totalPrice": "Общая сумма: ${totalPrice}",
-        "checkout": "Оформить заказ"
+        "checkout": "Оформить заказ",
+        "remove": "Удалить"
     },
     "checkoutPage": {
         "title": "Оформление заказа"

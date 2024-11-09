@@ -12,7 +12,8 @@
     "cartPage": {
         "title": "Cart Page",
         "totalPrice": "Total: ${totalPrice}",
-        "checkout": "Checkout"
+        "checkout": "Checkout",
+        "remove": "Remove"
     },
     "checkoutPage": {
         "title": "Checkout"
